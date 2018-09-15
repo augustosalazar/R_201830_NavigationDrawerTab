@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Text, View, StyleSheet,Button,Image } from 'react-native';
-import { createDrawerNavigator,DrawerItems } from 'react-navigation'
-import SettingsScreen from './src/SettingsScreen'
-import HomeScreen from './src/HomeScreen'
+//import { createDrawerNavigator,DrawerItems } from 'react-navigation'
+
 import {Container,Header,Body,Content}  from 'native-base'
+import {createMyDrawerNavigator} from "./src/Router";
 
 //https://www.youtube.com/watch?v=bJmsmrRtMyw
-
+/*
 const CustomDrawerContenetComponent = (props) => (
   <Container>
     <Header style={{height:200}}>
@@ -38,12 +38,11 @@ const MyApp = createDrawerNavigator({
   drawerToggleRoute: 'DrawerToggle',
 }
 )
-
+*/
 export default class App extends React.Component {
   render() {
-    return (
-        <MyApp/>
-    );
+      const Layout = createMyDrawerNavigator();
+      return <Layout />;
   }
 }
 
